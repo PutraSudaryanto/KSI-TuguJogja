@@ -1,0 +1,568 @@
+# Copyright (C) 2013 ThemeAwesome.com
+# This file is distributed under the GNU General Public License v2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: WP-Forge\n"
+"POT-Creation-Date: 2014-01-11 09:22-0700\n"
+"PO-Revision-Date: 2014-01-11 09:24-0700\n"
+"Last-Translator: Thomas Vasquez <tsquez@gmail.com>\n"
+"Language-Team: Thomas Vasquez <tsquez@gmail.com>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: 404.php:18
+msgid "This is somewhat embarrassing, isn&rsquo;t it?"
+msgstr ""
+
+#: 404.php:22
+msgid ""
+"It seems we can&rsquo;t find what you&rsquo;re looking for. Perhaps "
+"searching can help."
+msgstr ""
+
+#: archive.php:30
+#, php-format
+msgid "Daily Archives: %s"
+msgstr ""
+
+#: archive.php:32
+#, php-format
+msgid "Monthly Archives: %s"
+msgstr ""
+
+#: archive.php:32
+msgctxt "monthly archives date format"
+msgid "F Y"
+msgstr ""
+
+#: archive.php:34
+#, php-format
+msgid "Yearly Archives: %s"
+msgstr ""
+
+#: archive.php:34
+msgctxt "yearly archives date format"
+msgid "Y"
+msgstr ""
+
+#: archive.php:36
+msgid "Archives"
+msgstr ""
+
+#: author.php:33
+#, php-format
+msgid "Author Archives: %s"
+msgstr ""
+
+#: author.php:52 content-aside.php:28 content-audio.php:43 content-chat.php:36
+#: content-gallery.php:42 content-image.php:25 content-link.php:25
+#: content-quote.php:25 content-status.php:32 content-video.php:42
+#: content.php:49
+#, php-format
+msgid "About %s"
+msgstr ""
+
+#: category.php:22
+#, php-format
+msgid "Category Archives: %s"
+msgstr ""
+
+#: comments.php:31
+#, php-format
+msgid "One thought on &ldquo;%2$s&rdquo;"
+msgid_plural "%1$s thoughts on &ldquo;%2$s&rdquo;"
+msgstr[0] ""
+msgstr[1] ""
+
+#: comments.php:42
+msgid "Comment navigation"
+msgstr ""
+
+#: comments.php:43
+msgid "&larr; Older Comments"
+msgstr ""
+
+#: comments.php:44
+msgid "Newer Comments &rarr;"
+msgstr ""
+
+#: comments.php:53
+msgid "Comments are closed."
+msgstr ""
+
+#: content-aside.php:13 content-audio.php:18 content-gallery.php:17
+#: content-video.php:17 content.php:17 functions.php:735
+#, php-format
+msgid "Permalink to %s"
+msgstr ""
+
+#: content-aside.php:15 content-image.php:13 content-link.php:13
+#: content-quote.php:13 content-status.php:20
+msgid "Continue reading <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: content-aside.php:21 content-audio.php:36 content-chat.php:29
+#: content-gallery.php:35 content-image.php:18 content-link.php:18
+#: content-quote.php:18 content-status.php:25 content-video.php:35
+#: content.php:42 functions.php:633
+msgid "Edit"
+msgstr ""
+
+#: content-aside.php:32 content-audio.php:47 content-chat.php:40
+#: content-gallery.php:46 content-image.php:29 content-link.php:29
+#: content-quote.php:29 content-status.php:36 content-video.php:46
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: content-audio.php:29 content-gallery.php:28 content-video.php:28
+#: content.php:35
+msgid "Continue reading <span class=\"meta-nav\">&raquo;</span>"
+msgstr ""
+
+#: content-audio.php:30 content-chat.php:24 content-gallery.php:29
+#: content-page.php:18 content-video.php:29 content.php:36 image.php:94
+msgid "Pages:"
+msgstr ""
+
+#: content-nav.php:25 content-nav.php:64
+msgid "Menu"
+msgstr ""
+
+#: content-none.php:13
+msgid "Nothing Found"
+msgstr ""
+
+#: content-none.php:17
+msgid ""
+"Apologies, but no results were found. Perhaps another search will help you "
+"find what you&#39;re looking for."
+msgstr ""
+
+#: content-page.php:21
+msgid "Edit Page"
+msgstr ""
+
+#: content.php:25
+msgid "Leave a reply"
+msgstr ""
+
+#: content.php:25
+msgid "1 Reply"
+msgstr ""
+
+#: content.php:25
+msgid "% Replies"
+msgstr ""
+
+#: content.php:53
+#, php-format
+msgid "View all posts by %s <span class=\"meta-nav\">&raquo;</span>"
+msgstr ""
+
+#: footer.php:37
+msgid "Powered by"
+msgstr ""
+
+#: footer.php:37
+msgid "http://themeawesome.com/responsive-wordpress-theme/"
+msgstr ""
+
+#: footer.php:37
+msgid "Responsive WordPress Theme by ThemeAwesome.com"
+msgstr ""
+
+#: footer.php:37
+msgid "WP-Forge"
+msgstr ""
+
+#: footer.php:37
+msgid "http://wordpress.org/"
+msgstr ""
+
+#: footer.php:37
+msgid "WordPress"
+msgstr ""
+
+#: functions.php:92
+msgid "Main Navigation"
+msgstr ""
+
+#: functions.php:93
+msgid "Footer Navigation"
+msgstr ""
+
+#: functions.php:159
+msgctxt "Open Sans font: on or off"
+msgid "on"
+msgstr ""
+
+#: functions.php:220
+#, php-format
+msgid "Page %s"
+msgstr ""
+
+#: functions.php:235
+#, php-format
+msgid ""
+"Please assign a menu to the primary menu location under %1$s or %2$s the "
+"design."
+msgstr ""
+
+#: functions.php:236
+#, php-format
+msgid "<a href=\"%s\">Menus</a>"
+msgstr ""
+
+#: functions.php:239
+#, php-format
+msgid "<a href=\"%s\">Customize</a>"
+msgstr ""
+
+#: functions.php:397
+msgid "Main Sidebar"
+msgstr ""
+
+#: functions.php:399
+msgid "Displays widgets in the blog area as well as pages."
+msgstr ""
+
+#: functions.php:406
+msgid "First Front Page Widget Area"
+msgstr ""
+
+#: functions.php:408 functions.php:417
+msgid ""
+"Appears when using the optional Front Page template with a page set as "
+"Static Front Page"
+msgstr ""
+
+#: functions.php:415
+msgid "Second Front Page Widget Area"
+msgstr ""
+
+#: functions.php:424
+msgid "First Footer Widget Area"
+msgstr ""
+
+#: functions.php:426 functions.php:435 functions.php:444
+msgid "An optional widget area for your site footer"
+msgstr ""
+
+#: functions.php:433
+msgid "Second Footer Widget Area"
+msgstr ""
+
+#: functions.php:442
+msgid "Third Footer Widget Area"
+msgstr ""
+
+#: functions.php:575
+msgid "Post navigation"
+msgstr ""
+
+#: functions.php:576
+msgid "<span class=\"meta-nav\">&larr;</span> Older posts"
+msgstr ""
+
+#: functions.php:577
+msgid "Newer posts <span class=\"meta-nav\">&rarr;</span>"
+msgstr ""
+
+#: functions.php:601
+msgid "Pingback:"
+msgstr ""
+
+#: functions.php:601
+msgid "(Edit)"
+msgstr ""
+
+#: functions.php:616
+msgid "Post Author"
+msgstr ""
+
+#: functions.php:622
+#, php-format
+msgid "%1$s at %2$s"
+msgstr ""
+
+#: functions.php:628
+msgid "Your comment is awaiting moderation."
+msgstr ""
+
+#: functions.php:637
+msgid "Reply &raquo;"
+msgstr ""
+
+#: functions.php:656
+msgid "Sticky"
+msgstr ""
+
+#: functions.php:659
+msgid "Aside"
+msgstr ""
+
+#: functions.php:663
+msgid "Audio"
+msgstr ""
+
+#: functions.php:667
+msgid "Chat"
+msgstr ""
+
+#: functions.php:671
+msgid "Gallery"
+msgstr ""
+
+#: functions.php:675
+msgid "Image"
+msgstr ""
+
+#: functions.php:679
+msgid "Link"
+msgstr ""
+
+#: functions.php:683
+msgid "Quote"
+msgstr ""
+
+#: functions.php:687
+msgid "Status"
+msgstr ""
+
+#: functions.php:691
+msgid "Video"
+msgstr ""
+
+#: functions.php:698 functions.php:704
+msgid ", "
+msgstr ""
+
+#: functions.php:713
+#, php-format
+msgid "View all posts by %s"
+msgstr ""
+
+#: functions.php:731
+#, php-format
+msgctxt "1: post format name. 2: date"
+msgid "%1$s on %2$s"
+msgstr ""
+
+#: image.php:28
+#, php-format
+msgid ""
+"<span class=\"meta-prep meta-prep-entry-date\"><i class=\"fa fa-calendar-o"
+"\"></i> </span> <span class=\"entry-date\"><time class=\"entry-date\" "
+"datetime=\"%1$s\">%2$s</time></span>&nbsp;&nbsp;&nbsp;<i class=\"fa fa-"
+"camera-retro\"></i> <a href=\"%3$s\" title=\"Link to full-size image\">%4$s "
+"&times; %5$s</a>&nbsp;&nbsp;&nbsp;<i class=\"fa fa-folder-open\"></i> <a "
+"href=\"%6$s\" title=\"Return to %7$s\" rel=\"gallery\">%8$s</a>"
+msgstr ""
+
+#: image.php:39
+msgid " Edit"
+msgstr ""
+
+#: image.php:43
+msgid "&laquo; Previous Image"
+msgstr ""
+
+#: image.php:44
+msgid "Next Image &raquo;"
+msgstr ""
+
+#: index.php:38
+msgid "No posts to display"
+msgstr ""
+
+#: index.php:42
+#, php-format
+msgid "Ready to publish your first post? <a href=\"%s\">Get started here</a>."
+msgstr ""
+
+#: search.php:19
+#, php-format
+msgid "Search Results for: %s"
+msgstr ""
+
+#: searchform.php:4 searchform.php:7
+msgid "Search"
+msgstr ""
+
+#: single.php:21
+msgctxt "Previous post link"
+msgid "&laquo;"
+msgstr ""
+
+#: single.php:22
+msgctxt "Next post link"
+msgid "&raquo;"
+msgstr ""
+
+#: tag.php:22
+#, php-format
+msgid "Tag Archives: %s"
+msgstr ""
+
+#: inc/customizer/customizer.php:35
+msgid "Set up a front page of WP-Forge."
+msgstr ""
+
+#: inc/customizer/customizer.php:43
+msgid "Header"
+msgstr ""
+
+#: inc/customizer/customizer.php:44
+msgid "Modify the header portion of WP-Forge"
+msgstr ""
+
+#: inc/customizer/customizer.php:53
+msgid "Site Logo"
+msgstr ""
+
+#: inc/customizer/customizer.php:66
+msgid "Site Title"
+msgstr ""
+
+#: inc/customizer/customizer.php:78
+msgid "Tagline"
+msgstr ""
+
+#: inc/customizer/customizer.php:91
+msgid "Show Title &amp; Tagline"
+msgstr ""
+
+#: inc/customizer/customizer.php:107
+msgid "Main Menu Position"
+msgstr ""
+
+#: inc/customizer/customizer.php:123
+msgid "If Top, Scroll or Fixed Menu?"
+msgstr ""
+
+#: inc/customizer/customizer.php:139 inc/customizer/customizer.php:148
+msgid "Change text for Home Link?"
+msgstr ""
+
+#: inc/customizer/customizer.php:161
+msgid "If Yes, Add New Anchor Text"
+msgstr ""
+
+#: inc/customizer/customizer.php:169
+msgid "Posts"
+msgstr ""
+
+#: inc/customizer/customizer.php:170
+msgid "Modify how posts appear in WP-Forge."
+msgstr ""
+
+#: inc/customizer/customizer.php:182
+msgid "Display Full Post or Excerpt?"
+msgstr ""
+
+#: inc/customizer/customizer.php:198
+msgid "Display Post Thumbnails?"
+msgstr ""
+
+#: inc/customizer/customizer.php:208
+msgid "Footer"
+msgstr ""
+
+#: inc/customizer/customizer.php:209
+msgid "Modify the footer text of WP-Forge."
+msgstr ""
+
+#: inc/customizer/customizer.php:218
+msgid "Copyright Text"
+msgstr ""
+
+#: inc/customizer/customizer.php:226
+msgid "Background"
+msgstr ""
+
+#: inc/customizer/customizer.php:227
+msgid "Modify the background of WP-Forge."
+msgstr ""
+
+#: inc/customizer/customizer.php:241
+msgid "Background Color"
+msgstr ""
+
+#: inc/customizer/customizer.php:255
+msgid "Background Image"
+msgstr ""
+
+#: inc/customizer/customizer.php:270
+msgid "Background Repeat"
+msgstr ""
+
+#: inc/customizer/customizer.php:274
+msgid "No Repeat"
+msgstr ""
+
+#: inc/customizer/customizer.php:275
+msgid "Tile"
+msgstr ""
+
+#: inc/customizer/customizer.php:276
+msgid "Tile Horizontally"
+msgstr ""
+
+#: inc/customizer/customizer.php:277
+msgid "Tile Vertically"
+msgstr ""
+
+#: inc/customizer/customizer.php:291
+msgid "Background Position"
+msgstr ""
+
+#: inc/customizer/customizer.php:295
+msgid "Left"
+msgstr ""
+
+#: inc/customizer/customizer.php:296
+msgid "Center"
+msgstr ""
+
+#: inc/customizer/customizer.php:297
+msgid "Right"
+msgstr ""
+
+#: inc/customizer/customizer.php:311
+msgid "Background Attachment"
+msgstr ""
+
+#: inc/customizer/customizer.php:315
+msgid "Scroll"
+msgstr ""
+
+#: inc/customizer/customizer.php:316
+msgid "Fixed"
+msgstr ""
+
+#: inc/customizer/customizer.php:322
+msgid "Colors"
+msgstr ""
+
+#: inc/customizer/customizer.php:323
+msgid "Change some default colors of WP-Forge."
+msgstr ""
+
+#: inc/customizer/customizer.php:336
+msgid "Title Color"
+msgstr ""
+
+#: inc/customizer/customizer.php:350
+msgid "Text Color"
+msgstr ""
+
+#: inc/customizer/customizer.php:364
+msgid "Link Color"
+msgstr ""
+
+#: inc/customizer/customizer.php:378
+msgid "Hover Color"
+msgstr ""
