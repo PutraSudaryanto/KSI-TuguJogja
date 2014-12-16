@@ -634,8 +634,7 @@ div.main.home-preview .cell img {
 	display: block;
 	margin: 0 auto;
 }
-div.main.home-preview .cell h3,
-#fitur .cell h4 {
+div.main.home-preview .cell h3 {
 	margin: 0 0 15px 0;
 	font-size: 24px;
 	line-height: 28px;
@@ -703,62 +702,6 @@ div.body .content form#searchform input[type="submit"] {
 	border: none;
 	font-size: 14px;
 	line-height: 19px;
-}
-
-/* =Mengapa
--------------------------------------------------------------- */
-#mengapa h1 {
-	margin: 0 0 40px 0;
-}
-#mengapa p,
-#mengapa img {
-	padding: 0 0 0 0;
-	margin: 0 0 25px 0;
-}
-#mengapa p {
-	font-size: 18px;
-	line-height: 24px;
-	text-align: center;
-	font-weight: 300;
-}
-#mengapa p:last-child {
-	margin: 0 0 0 0;
-}
-#mengapa p.intro {
-	font-size: 26px;
-	line-height: 31px;
-}
-#mengapa img {
-	display: block;
-	width: 100%;
-}
-
-/* =Fitur
--------------------------------------------------------------- */
-#fitur .cell {
-	width: 33.3333333%;
-	padding: 0 15px 0 15px;
-	text-align: center;
-}
-#fitur .row:first-child .cell {
-	padding: 0 15px 50px 15px;
-}
-#fitur .cell,
-#fitur .cell * {
-	font-size: 16px;
-	line-height: 21px;
-	font-weight: 300;
-}
-#fitur .cell img {
-	display: inline-block;
-	margin-bottom: 5px;
-}
-#fitur .cell h4 {
-	margin: 0 0 12px 0;
-	font-size: 18px;
-	line-height: 24px;
-	color: #5c5c5c;
-	text-transform: uppercase;
 }
 
 /* =Kesan
@@ -1077,7 +1020,6 @@ div.body .content form#searchform input[type="submit"] {
 	margin: 0 0 10px 0;
 }
 #blog .sidebar h3,
-#blog .sidebar h3
 #faq .sidebar h3 {
 	padding: 0 0 0 0;
 	margin: 0 0 12px 0;
@@ -1891,8 +1833,6 @@ footer .copyright .right {
 		line-height: 26px;
 	}
 	/* Mengapa */
-	#mengapa h1,
-	#fitur h1,
 	#blog h1,
 	#faq h1,
 	#login h1,
@@ -1900,21 +1840,6 @@ footer .copyright .right {
 	#lostpassword h1,
 	#your-profile h1 {
 		margin: 0 0 30px 0;
-	}
-	#mengapa p,
-	#mengapa img {
-		margin: 0 0 20px 0;
-	}
-	#mengapa p {
-		font-size: 15px;
-		line-height: 20px;
-	}
-	#mengapa p:last-child {
-		margin: 0 0 0 0;
-	}
-	#mengapa p.intro {
-		font-size: 20px;
-		line-height: 26px;
 	}
 	/* Kesan */
 	#kesan .sep {
@@ -2100,45 +2025,6 @@ footer .copyright .right {
 	div.main.home-preview .cell:last-child {
 		padding: 0 0 0 0;
 	}
-	/* Mengapa */
-	#mengapa p {
-		font-size: 15px;
-		line-height: 20px;
-	}
-	#mengapa p.intro {
-		font-size: 18px;
-		line-height: 23px;
-	}
-	/* Fitur */
-	#fitur .table,
-	#fitur .row {
-		display: block;
-	}
-	#fitur .cell {
-		width: 50%;
-	}
-	#fitur .row .cell,
-	#fitur .row:first-child .cell {
-		padding: 0 12px 30px 12px;
-	}
-	#fitur .row:first-child .cell:first-child,
-	#fitur .row:last-child .cell:last-child {
-		display: block;
-		width: 100%;
-	}
-	#fitur .row:last-child .cell:last-child {
-		padding: 0 12px 0 12px;
-	}
-	#fitur .cell,
-	#fitur .cell * {
-		font-size: 14px;
-		line-height: 19px;
-	}
-	#fitur .cell h4 {
-		margin: 0 0 10px 0;
-		font-size: 16px;
-		line-height: 22px;
-	}
 	/* Kesan */
 	#kesan .sep {
 		padding: 0 0 25px 0;
@@ -2318,31 +2204,6 @@ footer .copyright .right {
 		margin: 0 0 0 0;
 		width: 100%;
 	}
-	/* Mengapa */
-	#mengapa p {
-		font-size: 13px;
-		line-height: 18px;
-	}
-	#mengapa p.intro {
-		font-size: 16px;
-		line-height: 21px;
-	}
-	/* Fitur */
-	#fitur .table,
-	#fitur .row {
-		display: block;
-	}
-	#fitur .cell {
-		display: block;
-		width: 100%;
-	}
-	#fitur .row .cell,
-	#fitur .row:first-child .cell {
-		padding: 0 0 25px 0;
-	}
-	#fitur .row:last-child .cell:last-child {
-		padding: 0 0 0 0;
-	}
 	/* Kesan */
 	#kesan .sep {
 		padding: 0 0 20px 0;
@@ -2438,16 +2299,6 @@ footer .copyright .right {
 		padding: 0 10px 20px 10px;
 		font-size: 40px;
 		line-height: 35px;
-	}
-	/* Fitur */
-	#fitur .cell,
-	#fitur .cell * {
-		font-size: 13px;
-		line-height: 18px;
-	}
-	#fitur .cell h4 {
-		font-size: 15px;
-		line-height: 21px;
 	}
 
 }
