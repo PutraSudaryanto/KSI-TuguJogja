@@ -2,11 +2,11 @@
 # BEGIN WordPress
 <IfModule mod_rewrite.c>
 RewriteEngine On
-RewriteBase /_client/notoboso.com/
+RewriteBase /_kampus/KSI/
 RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
-RewriteRule . /_client/notoboso.com/index.php [L]
+RewriteRule . /_kampus/KSI/index.php [L]
 </IfModule>
 
 # END WordPress
