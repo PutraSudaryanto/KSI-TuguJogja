@@ -8,8 +8,8 @@
  * located in the functions.php file.
  *
  * @package WordPress
- * @subpackage Ommu_Notoboso
- * @since Ommu-Notoboso 5.0.3
+ * @subpackage ommu_tugujogja
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 
 /*
@@ -28,7 +28,7 @@ if ( post_password_required() )
 	<?php if ( have_comments() ) : ?>
 		<h2 class="comments-title">
 			<?php
-				printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'ommu_notoboso' ),
+				printf( _n( 'One thought on &ldquo;%2$s&rdquo;', '%1$s thoughts on &ldquo;%2$s&rdquo;', get_comments_number(), 'ommu_tugujogja' ),
 					number_format_i18n( get_comments_number() ), '<span>' . get_the_title() . '</span>' );
 			?>
 		</h2>
@@ -39,9 +39,9 @@ if ( post_password_required() )
 
 		<?php if ( get_comment_pages_count() > 1 && get_option( 'page_comments' ) ) : // are there comments to navigate through ?>
 		<nav id="comment-nav-below" class="navigation" role="navigation">
-			<h1 class="assistive-text section-heading"><?php _e( 'Comment navigation', 'ommu_notoboso' ); ?></h1>
-			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'ommu_notoboso' ) ); ?></div>
-			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'ommu_notoboso' ) ); ?></div>
+			<h1 class="assistive-text section-heading"><?php _e( 'Comment navigation', 'ommu_tugujogja' ); ?></h1>
+			<div class="nav-previous"><?php previous_comments_link( __( '&larr; Older Comments', 'ommu_tugujogja' ) ); ?></div>
+			<div class="nav-next"><?php next_comments_link( __( 'Newer Comments &rarr;', 'ommu_tugujogja' ) ); ?></div>
 		</nav>
 		<?php endif; // check for comment navigation ?>
 
@@ -50,7 +50,7 @@ if ( post_password_required() )
 		 * But we only want the note on posts and pages that had comments in the first place.
 		 */
 		if ( ! comments_open() && get_comments_number() ) : ?>
-		<p class="nocomments"><?php _e( 'Comments are closed.' , 'ommu_notoboso' ); ?></p>
+		<p class="nocomments"><?php _e( 'Comments are closed.' , 'ommu_tugujogja' ); ?></p>
 		<?php endif; ?>
 
 	<?php endif; // have_comments() ?>

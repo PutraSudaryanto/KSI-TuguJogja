@@ -1,6 +1,6 @@
-Ommu-Notoboso
+Ommu-KSI-TuguJogja
 =======================================
-Based on Twenty Twelve, Ommu-Notoboso is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.0.3), the most advanced responsive front-end framework.
+Based on Twenty Twelve, Ommu-KSI-TuguJogja is a combination of two powerful platforms. The first being WordPress, the leading open source blogging tool and content management system. The second being Foundation (v5.0.3), the most advanced responsive front-end framework.
 
 Demo
 =======================================
@@ -8,7 +8,7 @@ http://wpforge.themeawesome.com/
 
 Configuration
 =======================================
-Once you have uploaded Ommu-Notoboso and activated it, go to Appearance > Customize
+Once you have uploaded Ommu-KSI-TuguJogja and activated it, go to Appearance > Customize
 
 = Header Section
 1. If you like to use a logo you can upload it here
@@ -54,7 +54,7 @@ Click on Save and Publish once you have made all changes.
 
 Github
 =======================================
-https://github.com/tsquez/Ommu-Notoboso
+https://github.com/tsquez/Ommu-KSI-TuguJogja
 
 Author
 =======================================
@@ -76,4 +76,4 @@ License
 GPLv2 - http://www.gnu.org/licenses/gpl-2.0.html
 Foundation by ZURB is MIT - http://opensource.org/licenses/MIT
 
-I hope you utilize Ommu-Notoboso to learn something new, create something awesome, have fun and, more importantly, I hope you share what you have learned with others.
+I hope you utilize Ommu-KSI-TuguJogja to learn something new, create something awesome, have fun and, more importantly, I hope you share what you have learned with others.

@@ -6,8 +6,8 @@
  * #main and #page div elements.
  *
  * @package WordPress
- * @subpackage Ommu_Notoboso
- * @since Ommu-Notoboso 5.0.3
+ * @subpackage ommu_tugujogja
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 ?>
 
@@ -18,11 +18,13 @@
 				<div class="box">
 					<h3>Contact Info</h3>
 					<div class="desc">
-					Jl. Jend Sudirman, Yogyakarta,</br>
-					Daerah Istimewa Yogyakarta,</br>
-					Indonesia (#TuguJogja Location)</br>
-					Phone : (+62)811-2540-432</br>
-					Email : <a href="mailto:support@tugujogja.ommu.co" title="Support #TuguJogja">support@tugujogja.ommu.co</a>
+						Jl. Jend Sudirman, Yogyakarta,</br>
+						Daerah Istimewa Yogyakarta,</br>
+						Indonesia (#TuguJogja Location)</br>
+						<div>
+							Phone : (+62)811-2540-432</br>
+							Email : <a href="mailto:support@tugujogja.ommu.co" title="Support #TuguJogja">support@tugujogja.ommu.co</a>
+						</div>
 					</div>
 					<div class="social">
 						<a class="facebook" href="https://www.facebook.com/hashtag/tugujogja" title="Facebook" target="_blank">Facebook</a>
@@ -93,7 +95,7 @@
         
 			<?php if ( get_theme_mod('ommu_footer_text') ) : echo get_theme_mod( 'ommu_footer_text'); else : ?>
             
-				<p><?php _e( 'Powered by', 'ommu_notoboso' ); ?> <a href="<?php echo esc_url(__('http://themeawesome.com/responsive-wordpress-theme/','ommu_notoboso')); ?>" rel="nofollow" target="_blank" title="<?php _e( 'Responsive WordPress Theme by ThemeAwesome.com', 'ommu_notoboso' ); ?>"><?php _e( 'Ommu-Notoboso', 'ommu_notoboso' ); ?></a> &amp; <a href="<?php echo esc_url(__('http://wordpress.org/','ommu_notoboso')); ?>" target="_blank" title="<?php _e( 'WordPress', 'ommu_notoboso' ); ?>"><?php _e( 'WordPress', 'ommu_notoboso' ); ?></a></p>
+				<p><?php _e( 'Powered by', 'ommu_tugujogja' ); ?> <a href="<?php echo esc_url(__('http://themeawesome.com/responsive-wordpress-theme/','ommu_tugujogja')); ?>" rel="nofollow" target="_blank" title="<?php _e( 'Responsive WordPress Theme by ThemeAwesome.com', 'ommu_tugujogja' ); ?>"><?php _e( 'Ommu-KSI-TuguJogja', 'ommu_tugujogja' ); ?></a> &amp; <a href="<?php echo esc_url(__('http://wordpress.org/','ommu_tugujogja')); ?>" target="_blank" title="<?php _e( 'WordPress', 'ommu_tugujogja' ); ?>"><?php _e( 'WordPress', 'ommu_tugujogja' ); ?></a></p>
                 
             <?php endif; ?>
             

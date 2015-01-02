@@ -2,13 +2,13 @@
 /**
  * Template Name: Full-width Page Template, No Sidebar
  *
- * Description: Ommu-Notoboso loves the no-sidebar look as much as
+ * Description: Ommu-KSI-TuguJogja loves the no-sidebar look as much as
  * you do. Use this page template to remove the sidebar from any page.
  *
  *
  * @package WordPress
- * @subpackage Ommu_Notoboso
- * @since Ommu-Notoboso 5.0.3
+ * @subpackage ommu_tugujogja
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 
 get_header(); ?>

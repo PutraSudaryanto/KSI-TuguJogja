@@ -16,7 +16,7 @@ function initialize() {
 		infoWindow.close();
 	});
 
-	var icons = new google.maps.MarkerImage(baseUrl+'/images/icons/map_marker.png', new google.maps.Size(55, 61), new google.maps.Point(0, 0));
+	var icons = new google.maps.MarkerImage(themeBaseUrl+'/images/icons/map_marker.png', new google.maps.Size(55, 61), new google.maps.Point(0, 0));
 	 
 	function createMarker(point, id, html) {
 		var marker = new google.maps.Marker({

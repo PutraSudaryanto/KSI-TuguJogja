@@ -5,8 +5,8 @@
  * If no active widgets in sidebar, let's hide it completely.
  *
  * @package WordPress
- * @subpackage Ommu_Notoboso
- * @since Ommu-Notoboso 5.0.3
+ * @subpackage ommu_tugujogja
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 
 if($wp->request == 'courses') {
@@ -16,13 +16,13 @@ if($wp->request == 'courses') {
 	$class = $arrAttr[0];
 }?>
 
-<?php if(!in_array($class, array('courses','lessons','topic'))) {?>
+<?php //if(!in_array($class, array('courses','lessons','topic'))) {?>
 	<?php get_sidebar('component-search'); ?>
 	<?php get_sidebar('component-recentpost'); ?>
 	<?php get_sidebar('component-archives'); ?>
 	
-<?php } else {?>
+<?php //} else {?>
 	<?php if ( is_active_sidebar( 'sidebar-1' ) ) : ?>
 		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 	<?php endif; ?>
-<?php }?>
+<?php //}?>

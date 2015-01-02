@@ -7,8 +7,8 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Ommu_Notoboso
- * @since Ommu-Notoboso 5.0.3
+ * @subpackage ommu_tugujogja
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
  
 $arrAttr = explode('/', $wp->request); 
@@ -24,7 +24,7 @@ get_header(); ?>
 			<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<ul class="breadcrumbs">','</ul>'); } ?>
 			
 			<?php if ( have_posts() ) : ?>				
-				<h1 class="page-title"><?php printf( __( 'Category Archives: %s', 'ommu_notoboso' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h1>
+				<h1 class="page-title"><?php printf( __( 'Category Archives: %s', 'ommu_tugujogja' ), '<span>' . single_cat_title( '', false ) . '</span>' ); ?></h1>
 					
 				<header class="archive-header">
 				<?php if ( category_description() ) : // Show an optional category description ?>

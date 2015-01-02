@@ -8,11 +8,12 @@
  * different template.
  *
  * @package WordPress
- * @subpackage Ommu_Notoboso
- * @since Ommu-Notoboso 5.0.3
+ * @subpackage ommu_tugujogja
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
- 
-$class = $wp->request;
+
+$arrAttr = explode('/', $wp->request);
+$class = $arrAttr[0];
 	
 get_header();?>
 
@@ -25,7 +26,14 @@ get_header();?>
 				
 				<?php if($class != 'faq') {?>
 					<?php while ( have_posts() ) : the_post(); ?>
-						<?php if(!in_array($class, array('your-profile','register','lostpassword','login'))) {?>
+						<?php if(!in_array($class, array(
+							'your-profile','register','lostpassword','login',
+							'activity','members','activate',
+							'about','history','access-location',
+							'location',
+							'gallery',
+							'support','faq','feedback',
+						))) {?>
 							<h1><?php the_title(); ?></h1>
 						<?php }
 						/*if($class == 'your-profile' ) {?>
@@ -46,7 +54,7 @@ get_header();?>
 						<?php if ( function_exists('yoast_breadcrumb') ) { yoast_breadcrumb('<ul class="breadcrumbs">','</ul>'); } ?>
 
 						<?php while ( have_posts() ) : the_post(); ?>
-							<h1><?php the_title(); ?></h1>
+							<?php /*<h1><?php the_title(); ?></h1>*/?>
 							<?php the_content(); ?>
 						<?php endwhile; ?>		
 					</div>

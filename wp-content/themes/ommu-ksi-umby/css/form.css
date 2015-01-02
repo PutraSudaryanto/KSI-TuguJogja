@@ -309,8 +309,8 @@ fieldset div.intro {
 fieldset div.clearfix {
 	padding: 0 0 15px 0;
 }
-fieldset div.intro:last-child,
-fieldset div.clearfix:last-child {
+fieldset div.wdform_row:last-child div.intro,
+fieldset div.wdform_row:last-child div.clearfix {
 	padding: 0 0 0 0;
 }
 fieldset div.clearfix:last-child,
@@ -350,8 +350,11 @@ fieldset div div.desc span.small-px * {
 fieldset div label span {
 	padding: 5px 0 0 0;
 }
+fieldset div label span.wdform-label,
 fieldset div label span.required {
 	display: inline-block;
+}
+fieldset div label span.required {
 	margin: 0 0 0 1px;
 	padding: 0 0 0 0;
 	color: #ff0000;

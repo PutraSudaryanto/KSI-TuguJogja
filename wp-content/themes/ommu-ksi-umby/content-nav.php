@@ -3,8 +3,8 @@
  * The template for displaying the Top-Bar menu.
  *
  * @package WordPress
- * @subpackage Ommu_Notoboso
- * @since Ommu-Notoboso 5.0.3
+ * @subpackage ommu_tugujogja
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 ?>
 <?php if( get_theme_mod( 'ommu_nav_position' ) == 'normal') { ?>
@@ -23,7 +23,7 @@
                     </li>
                 <?php } // end if ?> 
                     <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-                    <li class="toggle-topbar menu-icon"><a href="#"><span><?php // _e( 'Menu', 'ommu_notoboso' ); ?></span></a></li>
+                    <li class="toggle-topbar menu-icon"><a href="#"><span><?php // _e( 'Menu', 'ommu_tugujogja' ); ?></span></a></li>
                 </ul>
                 <section class="top-bar-section">
                     <?php
@@ -61,7 +61,7 @@
                     </li>
                 <?php } // end if ?>              
                 <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-                <li class="toggle-topbar menu-icon"><a href="#"><span><?php // _e( 'Menu', 'ommu_notoboso' ); ?></span></a></li>
+                <li class="toggle-topbar menu-icon"><a href="#"><span><?php // _e( 'Menu', 'ommu_tugujogja' ); ?></span></a></li>
             </ul>
             <section class="top-bar-section">
                 <?php
@@ -101,7 +101,7 @@
                         </li>
                     <?php } // end if ?> 
                         <!-- Remove the class "menu-icon" to get rid of menu icon. Take out "Menu" to just have icon alone -->
-                        <li class="toggle-topbar menu-icon"><a href="#"><span><?php // _e( 'Menu', 'ommu_notoboso' ); ?></span></a></li>
+                        <li class="toggle-topbar menu-icon"><a href="#"><span><?php // _e( 'Menu', 'ommu_tugujogja' ); ?></span></a></li>
                     </ul>
                     <section class="top-bar-section">
                         <?php

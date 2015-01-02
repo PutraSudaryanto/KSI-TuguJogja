@@ -10,8 +10,8 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Ommu_Notoboso
- * @since Ommu-Notoboso 5.0.3
+ * @subpackage ommu_tugujogja
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
  
 $class = $wp->request;
@@ -39,8 +39,8 @@ get_header(); ?>
 					// Show a different message to a logged-in user who can add posts.
 				?>
 					<article id="post-0" class="post no-results not-found">
-						<h1 class="page-title"><?php _e( 'No posts to display', 'ommu_notoboso' ); ?></h1>
-						<p><?php printf( __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'ommu_notoboso' ), admin_url( 'post-new.php' ) ); ?></p>
+						<h1 class="page-title"><?php _e( 'No posts to display', 'ommu_tugujogja' ); ?></h1>
+						<p><?php printf( __( 'Ready to publish your first post? <a href="%s">Get started here</a>.', 'ommu_tugujogja' ), admin_url( 'post-new.php' ) ); ?></p>
 					</article>
 
 				<?php else : ?>

@@ -7,8 +7,8 @@
  * Learn more: http://codex.wordpress.org/Template_Hierarchy
  *
  * @package WordPress
- * @subpackage Ommu_Notoboso
- * @since Ommu-Notoboso 5.0.3
+ * @subpackage ommu_tugujogja
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 
 get_header(); ?>
@@ -19,7 +19,7 @@ get_header(); ?>
 
 		<?php if ( have_posts() ) : ?>
 			<header class="archive-header">
-				<h1 class="archive-title"><?php printf( __( 'Tag Archives: %s', 'ommu_notoboso' ), '<span>' . single_tag_title( '', false ) . '</span>' ); ?></h1>
+				<h1 class="archive-title"><?php printf( __( 'Tag Archives: %s', 'ommu_tugujogja' ), '<span>' . single_tag_title( '', false ) . '</span>' ); ?></h1>
 
 			<?php if ( tag_description() ) : // Show an optional tag description ?>
 				<div class="archive-meta"><?php echo tag_description(); ?></div>

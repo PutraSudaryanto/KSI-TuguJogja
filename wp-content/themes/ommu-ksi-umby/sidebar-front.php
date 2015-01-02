@@ -5,8 +5,8 @@
  * If no active widgets in either sidebar, they will be hidden completely.
  *
  * @package WordPress
- * @subpackage Ommu_Notoboso
- * @since Ommu-Notoboso 5.0.3
+ * @subpackage ommu_tugujogja
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 
 /*

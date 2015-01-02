@@ -4,12 +4,12 @@
  *
  * Description: A page template that provides a key component of WordPress as a CMS
  * by meeting the need for a carefully crafted introductory page. The front page template
- * in Ommu-Notoboso consists of a page content area for adding text, images, video --
+ * in Ommu-KSI-TuguJogja consists of a page content area for adding text, images, video --
  * anything you'd like.
  *
  * @package WordPress
- * @subpackage Ommu_Notoboso
- * @since Ommu-Notoboso 5.0.3
+ * @subpackage ommu_tugujogja
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 
 get_header(); ?>

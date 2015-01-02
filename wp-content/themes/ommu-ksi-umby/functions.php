@@ -1,6 +1,6 @@
 <?php
 /**
- * Ommu-Notoboso functions and definitions.
+ * Ommu-KSI-TuguJogja functions and definitions.
  *
  * Sets up the theme and provides some helper functions, which are used
  * in the theme as custom template tags. Others are attached to action and
@@ -18,8 +18,8 @@
  * For more information on hooks, actions, and filters, see http://codex.wordpress.org/Plugin_API.
  *
  * @package WordPress
- * @subpackage Ommu_Notoboso
- * @since Ommu-Notoboso 5.0.3
+ * @subpackage ommu_tugujogja
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 
 /**
@@ -52,7 +52,7 @@ if ( ! isset( $content_width ) )
 
 /**
  * Sets up theme defaults and registers the various WordPress features that
- * Ommu-Notoboso supports.
+ * Ommu-KSI-TuguJogja supports.
  *
  * @uses load_theme_textdomain() For translation/localization support.
  * @uses add_editor_style() To add a Visual Editor stylesheet.
@@ -61,17 +61,17 @@ if ( ! isset( $content_width ) )
  * @uses register_nav_menu() To add support for navigation menus.
  * @uses set_post_thumbnail_size() To set a custom post thumbnail size.
  *
- * @since Ommu-Notoboso 5.0.3
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 function ommu_setup() {
 	/*
-	 * Makes Ommu-Notoboso available for translation.
+	 * Makes Ommu-KSI-TuguJogja available for translation.
 	 *
 	 * Translations can be added to the /languages/ directory.
-	 * If you're building a theme based on Ommu-Notoboso, use find and replace
-	 * to change 'ommu_notoboso' to the name of your theme in all the template files.
+	 * If you're building a theme based on Ommu-KSI-TuguJogja, use find and replace
+	 * to change 'ommu_tugujogja' to the name of your theme in all the template files.
 	 */
-	load_theme_textdomain( 'ommu_notoboso', get_template_directory() . '/language' );
+	load_theme_textdomain( 'ommu_tugujogja', get_template_directory() . '/language' );
 	
 	// This theme styles the visual editor to resemble the theme style
 	//add_editor_style( array( 'css/foundation.css','style.css','fonts/font-awesome.css', ommu_fonts_url() ) );
@@ -90,8 +90,8 @@ function ommu_setup() {
 
 	// This theme uses wp_nav_menu() in two locations.
 	register_nav_menus(array(
-		'primary' => __( 'Main Navigation', 'ommu_notoboso' ), 
-		'secondary' => __( 'Footer Navigation', 'ommu_notoboso' ) 
+		'primary' => __( 'Main Navigation', 'ommu_tugujogja' ), 
+		'secondary' => __( 'Footer Navigation', 'ommu_tugujogja' ) 
 	));
 	
 	// Add support for Infinite Scroll feature of Jetpack plugin - Find out more http://jetpack.me/support/infinite-scroll/
@@ -115,7 +115,7 @@ require( get_template_directory() . '/inc/customizer/customizer.php' );
 /**
  * Enqueues scripts and styles for front-end.
  *
- * @since Ommu-Notoboso 5.0.3
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 function ommu_scripts_styles() {
 	global $wp_styles;
@@ -137,14 +137,14 @@ function ommu_scripts_styles() {
 	// Load all of our stylesheets 
 	wp_enqueue_style( 'normalize', get_template_directory_uri() . '/css/normalize.css' );
 	//wp_enqueue_style( 'foundation', get_template_directory_uri() . '/css/foundation.css' );
-	wp_enqueue_style( 'ommu_notoboso', get_stylesheet_uri() );
+	wp_enqueue_style( 'ommu_tugujogja', get_stylesheet_uri() );
 	wp_enqueue_style( 'font-awesome', get_template_directory_uri() . '/fonts/font-awesome.css' );
 
 	//Load flexslider
 	wp_enqueue_style( 'flexslider', get_template_directory_uri() . '/css/flexslider.css' );	
 	wp_enqueue_script( 'flexslider-js', get_template_directory_uri() . '/js/flexslider/jquery.flexslider-min.js', array('jquery'), '', true );
 
-	// Register JavaScript file with functionality specific to Ommu-Notoboso.
+	// Register JavaScript file with functionality specific to Ommu-KSI-TuguJogja.
     wp_enqueue_script( 'functions-js', get_template_directory_uri() . '/js/functions.js', array('jquery'), '', true );
 
 }
@@ -153,7 +153,7 @@ add_action( 'wp_enqueue_scripts', 'ommu_scripts_styles' );
 /**
  * Returns the Google font stylesheet URL, if available.
  *
- * @since Ommu-Notoboso 5.0.3
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 function ommu_fonts_url() {
 	$fonts_url = '';
@@ -162,7 +162,7 @@ function ommu_fonts_url() {
 	 * supported by Source Sans Pro, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$open_sans_pro = _x( 'on', 'Open Sans font: on or off', 'ommu_notoboso' );
+	$open_sans_pro = _x( 'on', 'Open Sans font: on or off', 'ommu_tugujogja' );
 
 	if ( 'off' !== $open_sans_pro ) {
 			$font_families[] = 'Open+Sans:300italic,300';
@@ -188,7 +188,7 @@ function ommu_fonts_url() {
  * Also used in the Appearance > Header admin panel:
  * @see ommu_custom_header_setup()
  *
- * @since Ommu-Notoboso 5.0.3
+ * @since Ommu-KSI-TuguJogja 5.0.3
  *
  */
 function ommu_fonts() {
@@ -205,7 +205,7 @@ add_action( 'wp_enqueue_scripts', 'ommu_fonts' );
  * @param string $sep Optional separator.
  * @return string The filtered title.
  *
- * @since Ommu-Notoboso 5.0.3
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 function ommu_wp_title( $title, $sep ) {
 	global $paged, $page;
@@ -223,7 +223,7 @@ function ommu_wp_title( $title, $sep ) {
 
 	// Add a page number if necessary.
 	if ( $paged >= 2 || $page >= 2 )
-		$title = "$title $sep " . sprintf( __( 'Page %s', 'ommu_notoboso' ), max( $paged, $page ) );
+		$title = "$title $sep " . sprintf( __( 'Page %s', 'ommu_tugujogja' ), max( $paged, $page ) );
 
 	return $title;
 }
@@ -233,16 +233,16 @@ add_filter( 'wp_title', 'ommu_wp_title', 10, 2 );
  * A fallback when no navigation is selected by default, otherwise it throws some nasty errors in your face.
  * From required+ Foundation http://themes.required.ch
  *
- * @since Ommu-Notoboso 5.0.3 
+ * @since Ommu-KSI-TuguJogja 5.0.3 
  */
 function ommu_menu_fallback() {
 	echo '<div class="alert-box secondary"><p>';
 	// Translators 1: Link to Menus, 2: Link to Customize
-  	printf( __( 'Please assign a menu to the primary menu location under %1$s or %2$s the design.', 'ommu_notoboso' ),
-  		sprintf(  __( '<a href="%s">Menus</a>', 'ommu_notoboso' ),
+  	printf( __( 'Please assign a menu to the primary menu location under %1$s or %2$s the design.', 'ommu_tugujogja' ),
+  		sprintf(  __( '<a href="%s">Menus</a>', 'ommu_tugujogja' ),
   			get_admin_url( get_current_blog_id(), 'nav-menus.php' )
   		),
-  		sprintf(  __( '<a href="%s">Customize</a>', 'ommu_notoboso' ),
+  		sprintf(  __( '<a href="%s">Customize</a>', 'ommu_tugujogja' ),
   			get_admin_url( get_current_blog_id(), 'customize.php' )
   		)
   	);
@@ -262,7 +262,7 @@ add_filter( 'nav_menu_css_class', 'ommu_active_nav_class', 10, 2 );
  * Use the active class of ZURB Foundation on wp_list_pages output.
  * From required+ Foundation http://themes.required.ch
  *
- * @since Ommu-Notoboso 5.0.3 
+ * @since Ommu-KSI-TuguJogja 5.0.3 
  */
 function ommu_active_list_pages_class( $input ) {
 
@@ -281,7 +281,7 @@ add_filter( 'wp_list_pages', 'ommu_active_list_pages_class', 10, 2 );
  * Courtesy of Kriesi.at. http://www.kriesi.at/archives/improve-your-wordpress-navigation-menu-output
  * From required+ Foundation http://themes.required.ch
  *
- * @since Ommu-Notoboso 5.0.3 
+ * @since Ommu-KSI-TuguJogja 5.0.3 
  */
 class ommu_walker extends Walker_Nav_Menu {
 
@@ -396,58 +396,58 @@ class ommu_walker extends Walker_Nav_Menu {
 /**
  * Registers our main, front page and footer widget areas.
  *
- * @since Ommu-Notoboso 5.0.3
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 function ommu_widgets_init() {
 	register_sidebar( array(
-		'name' => __( 'Main Sidebar', 'ommu_notoboso' ),
+		'name' => __( 'Main Sidebar', 'ommu_tugujogja' ),
 		'id' => 'sidebar-1',
-		'description' => __( 'Displays widgets in the blog area as well as pages.', 'ommu_notoboso' ),
+		'description' => __( 'Displays widgets in the blog area as well as pages.', 'ommu_tugujogja' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
 	register_sidebar( array(
-		'name' => __( 'First Front Page Widget Area', 'ommu_notoboso' ),
+		'name' => __( 'First Front Page Widget Area', 'ommu_tugujogja' ),
 		'id' => 'sidebar-2',
-		'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'ommu_notoboso' ),
+		'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'ommu_tugujogja' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
 	register_sidebar( array(
-		'name' => __( 'Second Front Page Widget Area', 'ommu_notoboso' ),
+		'name' => __( 'Second Front Page Widget Area', 'ommu_tugujogja' ),
 		'id' => 'sidebar-3',
-		'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'ommu_notoboso' ),
+		'description' => __( 'Appears when using the optional Front Page template with a page set as Static Front Page', 'ommu_tugujogja' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );	
 	register_sidebar( array(
-		'name' => __( 'First Footer Widget Area', 'ommu_notoboso' ),
+		'name' => __( 'First Footer Widget Area', 'ommu_tugujogja' ),
 		'id' => 'sidebar-4',
-		'description' => __( 'An optional widget area for your site footer', 'ommu_notoboso' ),
+		'description' => __( 'An optional widget area for your site footer', 'ommu_tugujogja' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
 	register_sidebar( array(
-		'name' => __( 'Second Footer Widget Area', 'ommu_notoboso' ),
+		'name' => __( 'Second Footer Widget Area', 'ommu_tugujogja' ),
 		'id' => 'sidebar-5',
-		'description' => __( 'An optional widget area for your site footer', 'ommu_notoboso' ),
+		'description' => __( 'An optional widget area for your site footer', 'ommu_tugujogja' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
 		'after_title' => '</h3>',
 	) );
 	register_sidebar( array(
-		'name' => __( 'Third Footer Widget Area', 'ommu_notoboso' ),
+		'name' => __( 'Third Footer Widget Area', 'ommu_tugujogja' ),
 		'id' => 'sidebar-6',
-		'description' => __( 'An optional widget area for your site footer', 'ommu_notoboso' ),
+		'description' => __( 'An optional widget area for your site footer', 'ommu_tugujogja' ),
 		'before_widget' => '<aside id="%1$s" class="widget %2$s">',
 		'after_widget' => '</aside>',
 		'before_title' => '<h3 class="widget-title">',
@@ -566,7 +566,7 @@ if ( ! function_exists( 'ommu_content_nav' ) ) :
 /**
  * Displays navigation to next/previous pages when applicable.
  *
- * @since Ommu-Notoboso 5.0.3
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 function ommu_content_nav( $html_id ) {
 	global $wp_query;
@@ -578,9 +578,9 @@ function ommu_content_nav( $html_id ) {
 			<?php page_navi(); ?>
 		<?php else: ?>    
 		<nav id="<?php echo $html_id; ?>" class="navigation" role="navigation">
-			<h3 class="assistive-text"><?php _e( 'Post navigation', 'ommu_notoboso' ); ?></h3>
-			<div class="nav-previous alignleft"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'ommu_notoboso' ) ); ?></div>
-			<div class="nav-next alignright"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'ommu_notoboso' ) ); ?></div>
+			<h3 class="assistive-text"><?php _e( 'Post navigation', 'ommu_tugujogja' ); ?></h3>
+			<div class="nav-previous alignleft"><?php next_posts_link( __( '<span class="meta-nav">&larr;</span> Older posts', 'ommu_tugujogja' ) ); ?></div>
+			<div class="nav-next alignright"><?php previous_posts_link( __( 'Newer posts <span class="meta-nav">&rarr;</span>', 'ommu_tugujogja' ) ); ?></div>
 		</nav><!-- #<?php echo $html_id; ?> .navigation -->
         <?php endif; ?>        
 	<?php endif;
@@ -594,7 +594,7 @@ if ( ! function_exists( 'ommu_comment' ) ) :
  * simply create your own ommu_comment(), and that function will be used instead.
  * Used as a callback by wp_list_comments() for displaying the comments.
  *
- * @since Ommu-Notoboso 1.0
+ * @since Ommu-KSI-TuguJogja 1.0
  */
 function ommu_comment( $comment, $args, $depth ) {
 	$GLOBALS['comment'] = $comment;
@@ -604,7 +604,7 @@ function ommu_comment( $comment, $args, $depth ) {
 		// Display trackbacks differently than normal comments.
 	?>
 	<li <?php comment_class(); ?> id="comment-<?php comment_ID(); ?>">
-		<p><?php _e( 'Pingback:', 'ommu_notoboso' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'ommu_notoboso' ), '<span class="edit-link"><i class="fa fa-pencil"></i> ', '</span>' ); ?></p>
+		<p><?php _e( 'Pingback:', 'ommu_tugujogja' ); ?> <?php comment_author_link(); ?> <?php edit_comment_link( __( '(Edit)', 'ommu_tugujogja' ), '<span class="edit-link"><i class="fa fa-pencil"></i> ', '</span>' ); ?></p>
 	<?php
 			break;
 		default :
@@ -619,28 +619,28 @@ function ommu_comment( $comment, $args, $depth ) {
 					printf( '<cite class="fn">%1$s %2$s</cite>',
 						get_comment_author_link(),
 						// If current post author is also comment author, make it known visually.
-						( $comment->user_id === $post->post_author ) ? '<span> ' . __( 'Post Author', 'ommu_notoboso' ) . '</span>' : ''
+						( $comment->user_id === $post->post_author ) ? '<span> ' . __( 'Post Author', 'ommu_tugujogja' ) . '</span>' : ''
 					);
 					printf( '<a href="%1$s"><time datetime="%2$s">%3$s</time></a>',
 						esc_url( get_comment_link( $comment->comment_ID ) ),
 						get_comment_time( 'c' ),
 						/* translators: 1: date, 2: time */
-						sprintf( __( '%1$s at %2$s', 'ommu_notoboso' ), get_comment_date(), get_comment_time() )
+						sprintf( __( '%1$s at %2$s', 'ommu_tugujogja' ), get_comment_date(), get_comment_time() )
 					);
 				?>
 			</header><!-- .comment-meta -->
 
 			<?php if ( '0' == $comment->comment_approved ) : ?>
-				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'ommu_notoboso' ); ?></p>
+				<p class="comment-awaiting-moderation"><?php _e( 'Your comment is awaiting moderation.', 'ommu_tugujogja' ); ?></p>
 			<?php endif; ?>
 
 			<section class="comment-content comment">
 				<?php comment_text(); ?>
-				<?php edit_comment_link( __( 'Edit', 'ommu_notoboso' ), '<p class="edit-link"><i class="fa fa-pencil"></i> ', '</p>' ); ?>
+				<?php edit_comment_link( __( 'Edit', 'ommu_tugujogja' ), '<p class="edit-link"><i class="fa fa-pencil"></i> ', '</p>' ); ?>
 			</section><!-- .comment-content -->
 
 			<div class="reply">
-				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply &raquo;', 'ommu_notoboso' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
+				<?php comment_reply_link( array_merge( $args, array( 'reply_text' => __( 'Reply &raquo;', 'ommu_tugujogja' ), 'depth' => $depth, 'max_depth' => $args['max_depth'] ) ) ); ?>
 			</div><!-- .reply -->
 		</article><!-- #comment-## -->
 	<?php
@@ -653,25 +653,25 @@ endif;
  * Prints HTML with meta information for current post: categories, tags, permalink, author, and date.
  * Create your own ommu_entry_meta() to override in a child theme.
  *
- * @since Ommu-Notoboso 1.0
+ * @since Ommu-KSI-TuguJogja 1.0
  */
 if ( ! function_exists( 'ommu_entry_meta' ) ) :
 
 function ommu_entry_meta() {
 	if ( is_sticky() && is_home() && ! is_paged() )
-		echo '<i class="fa fa-thumb-tack"></i> <span class="sticky-post">' . __( 'Sticky', 'ommu_notoboso' ) . '</span>';				
+		echo '<i class="fa fa-thumb-tack"></i> <span class="sticky-post">' . __( 'Sticky', 'ommu_tugujogja' ) . '</span>';				
 
 	if ( ! has_post_format( '' ) && 'post' == get_post_type() )
 		ommu_entry_date();
 
 	// Translators: used between list items, there is a space after the comma.
-	$categories_list = get_the_category_list( __( ', ', 'ommu_notoboso' ) );
+	$categories_list = get_the_category_list( __( ', ', 'ommu_tugujogja' ) );
 	if ( $categories_list ) {
 		echo '<i class="fa fa-folder-open"></i> <span class="categories-links">' . $categories_list . '</span>';
 	}
 
 	// Translators: used between list items, there is a space after the comma.
-	$tag_list = get_the_tag_list( '', __( ', ', 'ommu_notoboso' ) );
+	$tag_list = get_the_tag_list( '', __( ', ', 'ommu_tugujogja' ) );
 	if ( $tag_list ) {
 		echo '<i class="fa fa-tag"></i> <span class="tags-links">' . $tag_list . '</span>';
 	}
@@ -680,7 +680,7 @@ function ommu_entry_meta() {
 	if ( 'post' == get_post_type() ) {
 		printf( '<i class="fa fa-user"></i> <span class="author vcard"><a class="url fn n" href="%1$s" title="%2$s" rel="author">%3$s</a></span>',
 			esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ),
-			esc_attr( sprintf( __( 'View all posts by %s', 'ommu_notoboso' ), get_the_author() ) ),
+			esc_attr( sprintf( __( 'View all posts by %s', 'ommu_tugujogja' ), get_the_author() ) ),
 			get_the_author()
 		);
 	}
@@ -693,16 +693,16 @@ endif;
  * @param boolean $echo Whether to echo the date. Default true.
  * @return string
  *
- * @since Ommu-Notoboso 1.0
+ * @since Ommu-KSI-TuguJogja 1.0
  */
 if ( ! function_exists( 'ommu_entry_date' ) ) :
 
 function ommu_entry_date( $echo = true ) {
-	$format_prefix = ( has_post_format( '' ) ) ? _x( '%1$s on %2$s', '1: post format name. 2: date', 'ommu_notoboso' ): '%2$s';
+	$format_prefix = ( has_post_format( '' ) ) ? _x( '%1$s on %2$s', '1: post format name. 2: date', 'ommu_tugujogja' ): '%2$s';
 
 	$date = sprintf( '<i class="fa fa-calendar-o"></i> <span class="date"><a href="%1$s" title="%2$s" rel="bookmark"><time class="entry-date" datetime="%3$s">%4$s</time></a></span>',
 		esc_url( get_permalink() ),
-		esc_attr( sprintf( __( 'Permalink to %s', 'ommu_notoboso' ), the_title_attribute( 'echo=0' ) ) ),
+		esc_attr( sprintf( __( 'Permalink to %s', 'ommu_tugujogja' ), the_title_attribute( 'echo=0' ) ) ),
 		esc_attr( get_the_date( 'c' ) ),
 		esc_html( sprintf( $format_prefix, get_post_format_string( get_post_format() ), get_the_date() ) )
 	);
@@ -726,7 +726,7 @@ endif;
  * @param array Existing class values.
  * @return array Filtered class values.
  *
- * @since Ommu-Notoboso 5.0.3
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 function ommu_body_class( $classes ) {
 	$background_color = get_background_color();
@@ -762,7 +762,7 @@ add_filter( 'body_class', 'ommu_body_class' );
  * Adjusts content_width value for full-width and single image attachment
  * templates, and when there are no active widgets in the sidebar.
  *
- * @since Ommu-Notoboso 5.0.3
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 function ommu_content_width() {
 	if ( is_page_template( 'page-templates/full-width.php' ) || is_attachment() || ! is_active_sidebar( 'sidebar-1' ) ) {
@@ -830,7 +830,7 @@ function remove_thumbnail_dimensions( $html ) {
 /**
  * Load Gravity Forms jQuery in the footer
  *
- * @since Ommu-Notoboso 5.0.3
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 add_filter("gform_init_scripts_footer", "init_scripts");
 function init_scripts() {
@@ -840,7 +840,7 @@ return true;
 /**
  * Remove wp version param from any enqueued scripts
  *
- * @since Ommu-Notoboso 5.0.3
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 
 function _remove_script_version( $src ){
@@ -853,7 +853,7 @@ add_filter( 'style_loader_src', '_remove_script_version', 15, 1 );
 /**
  * Remove .sticky from the post_class array (Thanks to required+ foundation)
  *
- * @since Ommu-Notoboso 5.0.3
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 function ommu_filter_post_class( $classes ) {
     if ( ( $key = array_search( 'sticky', $classes ) ) !== false ) {
@@ -868,7 +868,7 @@ add_filter( 'post_class', 'ommu_filter_post_class', 20 );
  * Removes recent comments styling injected into header by WordPress - Styles moved to style sheet
  * @see https://gist.github.com/Narga/2887406
  *
- * @since Ommu-Notoboso 5.0.3
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 function ommu_remove_recent_comments_style() {  
         global $wp_widget_factory;  
@@ -879,7 +879,7 @@ add_action( 'widgets_init', 'ommu_remove_recent_comments_style' );
 /**
  * Changes the URL of the admin login from WordPress to the sites URL
  *
- * @since Ommu-Notoboso 5.0.3
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 function change_wp_login_url() {
 	return esc_url( home_url() );
@@ -894,13 +894,14 @@ add_filter('login_headertitle', 'change_wp_login_title');
  * Custom admin footer. Displays in the admin section of WordPress
  * You can change this to reflect anything you want.
  * 
- * @since Ommu-Notoboso 5.0.3
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 function ommu_custom_admin_footer() {
 	$mysite = "http://themeawesome.com"; /* change this to your site name */
-	echo 'Built with Ommu-Notoboso, a responsive WordPress theme developed by <a href="' . $mysite . '" target="_blank">ThemeAwesome.com</a>.';
+	echo 'Built with Ommu-KSI-TuguJogja, a responsive WordPress theme developed by <a href="' . $mysite . '" target="_blank">ThemeAwesome.com</a>.';
 }
 
 add_filter('admin_footer_text', 'ommu_custom_admin_footer');
+add_filter('show_admin_bar', '__return_false');
 
 ?>

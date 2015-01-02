@@ -1,8 +1,8 @@
 <?php
 
 /**
-* Ommu-Notoboso Theme Customizer
-* A Theme Customizer for Ommu-Notoboso. Adds the individual sections, settings, and controls to the theme customizer
+* Ommu-KSI-TuguJogja Theme Customizer
+* A Theme Customizer for Ommu-KSI-TuguJogja. Adds the individual sections, settings, and controls to the theme customizer
 *
 * Built utilizing the following tutorials:
 *
@@ -18,10 +18,10 @@
 * @author Devin Price (@devinsays)
 * @see http://wptheming.com/2012/06/add-options-to-theme-customizer-default-sections/
 *
-* @since Ommu-Notoboso 5.0.3
+* @since Ommu-KSI-TuguJogja 5.0.3
 */
 
-function ommu_customizer( $wp_customize ) { // Begin Ommu-Notoboso Theme Customizer
+function ommu_customizer( $wp_customize ) { // Begin Ommu-KSI-TuguJogja Theme Customizer
 
 // Remove the default sections because we are going to create our own
 $wp_customize->remove_section('title_tagline');
@@ -32,7 +32,7 @@ $wp_customize->remove_section('background_image');
 // Change some of the defaults
 $wp_customize->get_section('nav')->priority = 20; // Changed priority so it shows after the Header section
 $wp_customize->get_section('static_front_page')->priority = 70; // Changed priority so it shows at the end of the Theme Customizer
-$wp_customize->get_section('static_front_page')->description = __( 'Set up a front page of Ommu-Notoboso.', 'ommu_notoboso' );
+$wp_customize->get_section('static_front_page')->description = __( 'Set up a front page of Ommu-KSI-TuguJogja.', 'ommu_tugujogja' );
  
 /*
  * OK, now we can start building our own theme customizer.
@@ -40,8 +40,8 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 
 // Header Section
     $wp_customize->add_section('ommu_header', array(
-		'title' => __('Header', 'ommu_notoboso'),
-		'description' => __('Modify the header portion of Ommu-Notoboso', 'ommu_notoboso'),
+		'title' => __('Header', 'ommu_tugujogja'),
+		'description' => __('Modify the header portion of Ommu-KSI-TuguJogja', 'ommu_tugujogja'),
 		'priority' => 10,
 	));
 	// Add Site Logo
@@ -50,7 +50,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'type'           => 'theme_mod',
 	));	 
 	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'ommu_logo',array(
-		'label' => __('Site Logo', 'ommu_notoboso'),
+		'label' => __('Site Logo', 'ommu_tugujogja'),
 		'section' => 'ommu_header',
 		'settings' => 'ommu_logo',
 		'priority' => 1,
@@ -63,7 +63,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'transport'  => 'postMessage',
 	 ));
 	$wp_customize->add_control('blogname', array( 
-		'label'    => __('Site Title', 'ommu_notoboso'),
+		'label'    => __('Site Title', 'ommu_tugujogja'),
 		'section'  => 'ommu_header',
 		'priority' => 2,
 	 ));
@@ -75,7 +75,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'transport'  => 'postMessage',
 	 ));
 	$wp_customize->add_control('blogdescription', array( 
-		'label'    => __('Tagline', 'ommu_notoboso'),
+		'label'    => __('Tagline', 'ommu_tugujogja'),
 		'section'  => 'ommu_header',
 		'priority' => 3,
 	 ));
@@ -88,7 +88,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'transport'  => 'postMessage',
 	 ));	
 	$wp_customize->add_control('hide_headtxt', array( 
-		'label'    => __('Show Title &amp; Tagline', 'ommu_notoboso'),
+		'label'    => __('Show Title &amp; Tagline', 'ommu_tugujogja'),
 		'section'  => 'ommu_header',
 		'type'     => 'checkbox',
 		'priority' => 4,
@@ -104,7 +104,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 	));
 	$wp_customize->add_control('ommu_nav_position',array(
 		'type' => 'select',
-		'label' => __('Main Menu Position', 'ommu_notoboso'),
+		'label' => __('Main Menu Position', 'ommu_tugujogja'),
 		'section' => 'nav',
 		'choices' => array(
 			'normal' => 'Normal Position',
@@ -121,7 +121,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 	));
 	$wp_customize->add_control('ommu_nav_display',array(
 		'type' => 'select',
-		'label' => __('If Top of Browser, scroll or fixed?', 'ommu_notoboso'),
+		'label' => __('If Top of Browser, scroll or fixed?', 'ommu_tugujogja'),
 		'section' => 'nav',
 		'choices' => array(
 			'scroll' => 'Scroll',
@@ -137,7 +137,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 	));
 	$wp_customize->add_control('ommu_nav_title',array(
 		'type' => 'select',
-		'label' => __('Change text for Home Link?', 'ommu_notoboso'),
+		'label' => __('Change text for Home Link?', 'ommu_tugujogja'),
 		'section' => 'nav',
 		'choices' => array(
 			'no' => 'No',
@@ -146,7 +146,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 	));
 	$wp_customize->add_control('ommu_nav_title',array(
 		'type' => 'select',
-		'label' => __('Change text for Home Link?', 'ommu_notoboso'),
+		'label' => __('Change text for Home Link?', 'ommu_tugujogja'),
 		'section' => 'nav',
 		'choices' => array(
 			'no' => 'No',
@@ -159,7 +159,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'priority' => 140,
 	));
 	$wp_customize->add_control('ommu_nav_text',array(
-		'label' => __('If Yes, Add New Anchor Text','ommu_notoboso'),
+		'label' => __('If Yes, Add New Anchor Text','ommu_tugujogja'),
 		'section' => 'nav',
 		'type' => 'text',
 		'sanitize_callback' => 'ommu_sanitize_navtxt',
@@ -167,8 +167,8 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 	
 //The Post Section 
     $wp_customize->add_section('ommu_posts',array(
-		'title' => __('Posts', 'ommu_notoboso'),
-		'description' => __('Modify how posts appear in Ommu-Notoboso.', 'ommu_notoboso'),
+		'title' => __('Posts', 'ommu_tugujogja'),
+		'description' => __('Modify how posts appear in Ommu-KSI-TuguJogja.', 'ommu_tugujogja'),
 		'priority' => 30,
     ));
 	$wp_customize->add_setting('ommu_post_display',array(
@@ -180,7 +180,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 	));
 	$wp_customize->add_control('ommu_post_display',array(
 		'type' => 'select',
-		'label' => __('Display Full Post or Excerpt?', 'ommu_notoboso'),
+		'label' => __('Display Full Post or Excerpt?', 'ommu_tugujogja'),
 		'section' => 'ommu_posts',
 		'choices' => array(
 			'full' => 'Full Post',
@@ -196,7 +196,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 	));
 	$wp_customize->add_control('ommu_thumb_display',array(
 		'type' => 'select',
-		'label' => __('Display Post Thumbnails?', 'ommu_notoboso'),
+		'label' => __('Display Post Thumbnails?', 'ommu_tugujogja'),
 		'section' => 'ommu_posts',
 		'choices' => array(
 			'no' => 'No',
@@ -206,8 +206,8 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 				
 //The Footer Section
     $wp_customize->add_section('ommu_footer',array(
-		'title' => __('Footer','ommu_notoboso'),
-		'description' => __('Modify the footer text of Ommu-Notoboso.', 'ommu_notoboso'),
+		'title' => __('Footer','ommu_tugujogja'),
+		'description' => __('Modify the footer text of Ommu-KSI-TuguJogja.', 'ommu_tugujogja'),
 		'priority' => 40,
     ));
 	$wp_customize->add_setting('ommu_footer_text',array(
@@ -216,7 +216,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'transport' => 'postMessage',
 	));
 	$wp_customize->add_control('ommu_footer_text',array(
-		'label' => __('Copyright Text','ommu_notoboso'),
+		'label' => __('Copyright Text','ommu_tugujogja'),
 		'section' => 'ommu_footer',
 		'type' => 'text',
 		'sanitize_callback' => 'ommu_sanitize_footer_text',
@@ -224,8 +224,8 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 
 // Background Section
     $wp_customize->add_section('ommu_background', array(
-		'title' => __('Background', 'ommu_notoboso'),
-		'description' => __('Modify the background of Ommu-Notoboso.', 'ommu_notoboso'),
+		'title' => __('Background', 'ommu_tugujogja'),
+		'description' => __('Modify the background of Ommu-KSI-TuguJogja.', 'ommu_tugujogja'),
 		'priority' => 50,
      ));
 	// Background Color	 
@@ -239,7 +239,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'priority' => 1,		
     ));
 	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'ommu_background_color',array(
-		'label' => __('Background Color', 'ommu_notoboso'),
+		'label' => __('Background Color', 'ommu_tugujogja'),
 		'section' => 'ommu_background',
 		'settings' => 'ommu_background_color',
 	)));	 
@@ -253,7 +253,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'priority' => 2,						
 	));	 
 	$wp_customize->add_control(new WP_Customize_Image_Control($wp_customize,'ommu_background_img',array(
-		'label' => __('Background Image', 'ommu_notoboso'),
+		'label' => __('Background Image', 'ommu_tugujogja'),
 		'section' => 'ommu_background',
 		'settings' => 'ommu_background_img',
 	)));
@@ -268,14 +268,14 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'priority' => 3,			
 	));
 	$wp_customize->add_control( 'ommu_background_repeat', array(
-		'label'      => __( 'Background Repeat','ommu_notoboso' ),
+		'label'      => __( 'Background Repeat','ommu_tugujogja' ),
 		'section'    => 'ommu_background',
 		'type'       => 'select',
 		'choices'    => array(
-			'no-repeat'  => __('No Repeat', 'ommu_notoboso'),
-			'repeat'     => __('Tile', 'ommu_notoboso'),
-			'repeat-x'   => __('Tile Horizontally', 'ommu_notoboso'),
-			'repeat-y'   => __('Tile Vertically', 'ommu_notoboso'),
+			'no-repeat'  => __('No Repeat', 'ommu_tugujogja'),
+			'repeat'     => __('Tile', 'ommu_tugujogja'),
+			'repeat-x'   => __('Tile Horizontally', 'ommu_tugujogja'),
+			'repeat-y'   => __('Tile Vertically', 'ommu_tugujogja'),
 		),
 	));
 	// Background Image Position	
@@ -289,13 +289,13 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'priority' => 4,			
 	));
 	$wp_customize->add_control( 'ommu_background_position', array(
-		'label'      => __( 'Background Position','ommu_notoboso' ),
+		'label'      => __( 'Background Position','ommu_tugujogja' ),
 		'section'    => 'ommu_background',
 		'type'       => 'select',
 		'choices'    => array(
-			'left'       => __('Left', 'ommu_notoboso'),
-			'center'     => __('Center', 'ommu_notoboso'),
-			'right'      => __('Right', 'ommu_notoboso'),
+			'left'       => __('Left', 'ommu_tugujogja'),
+			'center'     => __('Center', 'ommu_tugujogja'),
+			'right'      => __('Right', 'ommu_tugujogja'),
 		),
 	));
 	// Background Image Attachment	
@@ -309,19 +309,19 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'priority' 	 => 5,			
 	));
 	$wp_customize->add_control( 'ommu_background_attachment', array(
-		'label'      => __( 'Background Attachment','ommu_notoboso' ),
+		'label'      => __( 'Background Attachment','ommu_tugujogja' ),
 		'section'    => 'ommu_background',
 		'type'       => 'select',
 		'choices'    => array(
-			'scroll'      => __('Scroll', 'ommu_notoboso'),
-			'fixed'     => __('Fixed', 'ommu_notoboso'),
+			'scroll'      => __('Scroll', 'ommu_tugujogja'),
+			'fixed'     => __('Fixed', 'ommu_tugujogja'),
 		),
 	));
 	
 // Colors Section
     $wp_customize->add_section('ommu_colors', array(
-		'title' => __('Colors', 'ommu_notoboso'),
-		'description' => __('Change some default colors of Ommu-Notoboso.', 'ommu_notoboso'),
+		'title' => __('Colors', 'ommu_tugujogja'),
+		'description' => __('Change some default colors of Ommu-KSI-TuguJogja.', 'ommu_tugujogja'),
 		'priority' => 60,
      )); 	 	 
 	// Title Color	 
@@ -334,7 +334,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'priority' => 4,		
     ));
 	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'ommu_title_color',array(
-		'label' => __('Title Color','ommu_notoboso'),
+		'label' => __('Title Color','ommu_tugujogja'),
 		'section' => 'ommu_colors',
 		'settings' => 'ommu_title_color',
 	)));
@@ -348,7 +348,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'priority' => 5,		
     ));
 	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'ommu_text_color',array(
-		'label' => __('Text Color','ommu_notoboso'),
+		'label' => __('Text Color','ommu_tugujogja'),
 		'section' => 'ommu_colors',
 		'settings' => 'ommu_text_color',
 	)));	
@@ -362,7 +362,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'priority' => 6,		
     ));
 	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'ommu_link_color',array(
-		'label' => __('Link Color','ommu_notoboso'),
+		'label' => __('Link Color','ommu_tugujogja'),
 		'section' => 'ommu_colors',
 		'settings' => 'ommu_link_color',
 	)));
@@ -376,7 +376,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
 		'priority' => 7,		
     ));
 	$wp_customize->add_control(new WP_Customize_Color_Control($wp_customize,'ommu_hover_color',array(
-		'label' => __('Hover Color','ommu_notoboso'),
+		'label' => __('Hover Color','ommu_tugujogja'),
 		'section' => 'ommu_colors',
 		'settings' => 'ommu_hover_color',
 	)));			 
@@ -385,7 +385,7 @@ $wp_customize->get_section('static_front_page')->description = __( 'Set up a fro
  * Sanitize - Add a sanitation functions section for text inputs, check boxes, radio buttons and select lists
  * I like to keep them all in one area for organization.
  * 
- * @since Ommu-Notoboso 5.0.3
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
  
  // Header Sanitation
@@ -478,7 +478,7 @@ function ommu_sanitize_background_attachment( $input ) {
  * Add postMessage support for some sections of our Theme Customizer.
  * @param WP_Customize_Manager $wp_customize Theme Customizer object.
  * 
- * @since Ommu-Notoboso 5.0.3
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 $wp_customize->get_setting( 'blogname' )->transport = 'postMessage';
 $wp_customize->get_setting( 'blogdescription' )->transport = 'postMessage';
@@ -495,14 +495,14 @@ $wp_customize->get_setting( 'ommu_link_color' )->transport = 'postMessage';
 $wp_customize->get_setting( 'ommu_hover_color' )->transport = 'postMessage';
 
 }
-add_action( 'customize_register', 'ommu_customizer' ); // End Ommu-Notoboso Theme Customizer
+add_action( 'customize_register', 'ommu_customizer' ); // End Ommu-KSI-TuguJogja Theme Customizer
 
 /**
- * Modifies our styles and writes them in the <head> element of the page based on the Ommu-Notoboso Theme Customizer options
+ * Modifies our styles and writes them in the <head> element of the page based on the Ommu-KSI-TuguJogja Theme Customizer options
  * @author Anthony Wilhelm (@awshout)
  * @see https://github.com/awtheme/reactor
  *
- * @since Ommu-Notoboso 5.0.3
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 function ommu_customizer_css() {
 	do_action('ommu_customizer_css');
@@ -548,9 +548,9 @@ function ommu_customizer_css() {
 add_action('wp_head', 'ommu_customizer_css');
 
 /**
- * Registers Ommu-Notoboso Theme Customizer Preview with WordPress.
+ * Registers Ommu-KSI-TuguJogja Theme Customizer Preview with WordPress.
  *
- * @since Ommu-Notoboso 5.0.3
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 function ommu_customize_preview_js() {
 	wp_enqueue_script('ommu-customizer', get_template_directory_uri() . '/inc/customizer/js/theme-customizer.js', array('jquery', 'customize-preview' ),'1.0.0', true);

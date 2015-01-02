@@ -1,3 +1,8 @@
+<?php
+$arrAttr = explode('/', $wp->request);
+$class = $arrAttr[0];
+//echo $class;
+?>
 <!DOCTYPE html>
 <!--[if IE 7]>
 <html class="ie ie7" <?php language_attributes(); ?>>
@@ -19,16 +24,13 @@
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/form.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/typography.css" />
 	<link rel="stylesheet" type="text/css" href="<?php echo get_template_directory_uri(); ?>/css/layout.css" />
-	<?php if(is_front_page()) {?>
-	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/custom/custom_maps.js"></script>
-	<?php }?>
 	<?php wp_head(); ?>
 	<script type="text/javascript">
-		var baseUrl = "<?php echo get_template_directory_uri(); ?>";
+		var baseUrl = "<?php echo esc_url(home_url()); ?>";
+		var themeBaseUrl = "<?php echo get_template_directory_uri(); ?>";
 		var ntbs = jQuery.noConflict();
 		ntbs(document).ready(function() {
-			<?php if(is_front_page()) {?>
+			<?php if(is_front_page() || (!is_front_page() && $class == 'location')) {?>
 			initialize();
 			<?php }?>
 			
@@ -46,6 +48,16 @@
 			});
 		});
 	</script>
+	<?php if(is_front_page() || (!is_front_page() && $class == 'location')) {?>
+	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
+	<?php } if(is_front_page()) {?>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/custom/custom_maps.js"></script>	
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/supersized.3.2.7.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/supersized.shutter.min.js"></script>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/custom/custom.js"></script>
+	<?php } if(!is_front_page() && $class == 'location') {?>
+	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/custom/custom_maps.js"></script>
+	<?php }?>
 	<title><?php wp_title( '|', true, 'right' ); ?></title>
  </head>
  <body <?php body_class(); ?>>
@@ -68,6 +80,9 @@
 						'items_wrap'  => '%3$s',
                         'fallback_cb' => 'ommu_menu_fallback', // workaround to show a message to set up a menu
 					)); ?>
+					<?php /*if (!is_user_logged_in()) {?>
+					<li><a href="<?php echo get_permalink(13);?>" title="Activate">Activate</a></li>
+					<?php }*/?>
 				</ul>
 			</div>
 			<div class="usermenu">
@@ -94,7 +109,7 @@
 							)); ?>
 						</ul>
 					</li>
-					<li class="member-off <?php echo in_array($wp->request, array('your-profile')) ? 'active' : '';?>">
+					<li class="member-off <?php echo in_array($class, array('your-profile')) ? 'active' : '';?>">
 						<a href="<?php echo get_permalink(13);?>" title="Hi, <?php echo $current_user->user_login;?>">Hi, <?php echo $current_user->user_login;?></a>
 						<ul>
 							<li><?php echo get_avatar($current_user->display_name, 50);?></li>
@@ -155,40 +170,47 @@
 	//}?>
 	
 	<?php if(is_front_page()) {?>
-	<div class="main home-preview-large">
-		<div class="container">
-			<h2>bahasa inggris itu mudah...</h2>
-			<div>
-			<?php if(is_user_logged_in()) {?>
-			<?php } else {?>
-				<a href="<?php echo get_permalink(10);?>" title="Daftar Gratis">Daftar Gratis</a>
-			<?php }?>
+	<div id="slider" class="slider">		
+		<?php //begin.Thumbnail Navigation ?>
+		<div id="prevthumb"></div>
+		<div id="nextthumb"></div>
+	
+		<?php //begin.Time Bar ?>
+		<div id="progress-back" class="load-item">
+			<div id="progress-bar"></div>
+		</div>
+	
+		<?php //Control Bar ?>
+		<div id="controls-wrapper" class="load-item">
+			<div id="controls">	
+				<?php //Navigation ?>
+				<ul id="slide-list"></ul>
 			</div>
 		</div>
 	</div>
+	
+	<div class="main home-preview-large">
+		<div class="container">
+			
+			<?php /* if(is_user_logged_in()) {?>
+			<?php } else {?>
+				<a href="<?php echo get_permalink(10);?>" title="Daftar Gratis">Daftar Gratis</a>
+			<?php }*/?>
+		</div>
+	</div>
 	<?php } else {
-		if(!is_404()) {
-		$arrAttr = explode('/', $wp->request);
-		$class = $arrAttr[0]; ?>
+		if(!is_404()) {?>
 		<div class="large-title <?php echo ($class == 'your-profile' || in_array($class, array('courses','lessons','topic'))) ? 'text-left' : ''; ?>">
 			<div class="container">
-				<?php if($class == 'faq') {?>
-				<h2>Pahami Informasi-Informasi Penting<br/>Tentang Website Ini.</h2>
-				<?php } else if($class == 'mengapa') {?>
-				<h2>Alasan Kursus Bahasa Inggris<br/>di Notoboso?</h2>
-				<?php } else if($class == 'fitur') {?>
-				<h2>Belajar Bahasa Inggris<br/>Mudah dan Menyenangkan.</h2>
-				<?php } else if($class == 'kesan') {?>
+				<?php if($class == 'kesan') {?>
 				<h2>Kesan-kesan Para Siswa dan<br/>Alumni Notoboso.</h2>
 				<?php } else if($class == 'your-profile' || in_array($class, array('courses','lessons','topic'))) {?>
-				<h2>"Selamat belajar."</h2>
-				<h5>Upgrade akunmu untuk melanjutkan pelajaran-pelajaran<br/>di level yang lebih tinggi.</h5>
-				<?php } else if($class == 'register') {?>
-				<h2>Daftar Sekarang</h2>
-				<?php } else if(in_array($class, array('lostpassword-2','lostpassword','login-2','login'))) {?>
-				<h2><?php the_title(); ?></h2>
+				<h2>"Selamat belibur."</h2>
+				<!--<h5>Upgrade akunmu untuk melanjutkan pelajaran-pelajaran<br/>di level yang lebih tinggi.</h5>-->
+				<?php } else if($class == 'blog') {?>
+				<h2>Simak Informasi-Informasi<br/>Penting tentang #TuguJogja.</h2>
 				<?php } else {?>
-				<h2>Simak Informasi-Informasi<br/>Penting dari Kami.</h2>
+				<h2><?php the_title(); ?></h2>
 				<?php }?>
 			</div>
 		</div>

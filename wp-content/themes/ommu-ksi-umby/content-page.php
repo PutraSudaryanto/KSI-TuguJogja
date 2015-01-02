@@ -3,8 +3,8 @@
  * The template used for displaying page content in page.php
  *
  * @package WordPress
- * @subpackage Ommu_Notoboso
- * @since Ommu-Notoboso 5.0.3
+ * @subpackage ommu_tugujogja
+ * @since Ommu-KSI-TuguJogja 5.0.3
  */
 ?>
 
@@ -15,9 +15,9 @@
 
 		<div class="entry-content">
 			<?php the_content(); ?>
-			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'ommu_notoboso' ), 'after' => '</div>' ) ); ?>
+			<?php wp_link_pages( array( 'before' => '<div class="page-links">' . __( 'Pages:', 'ommu_tugujogja' ), 'after' => '</div>' ) ); ?>
 		</div><!-- .entry-content -->
 		<footer class="entry-meta">
-			<?php edit_post_link( __( 'Edit Page', 'ommu_notoboso' ), '<span class="edit-link"><i class="fa fa-pencil"></i> ', '</span>' ); ?>
+			<?php edit_post_link( __( 'Edit Page', 'ommu_tugujogja' ), '<span class="edit-link"><i class="fa fa-pencil"></i> ', '</span>' ); ?>
 		</footer><!-- .entry-meta -->
 	</article><!-- #post -->
