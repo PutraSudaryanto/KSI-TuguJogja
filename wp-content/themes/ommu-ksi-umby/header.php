@@ -46,15 +46,16 @@ $class = $arrAttr[0];
 					ntbs('#your-profile #other-course').show();
 				}
 			});
+			var windowHeight = ntbs(window).height();
+			mainHeight = windowHeight - 58;
+			ntbs("div.main.home-preview-large").css('height', mainHeight+'px');
+			
 		});
 	</script>
 	<?php if(is_front_page() || (!is_front_page() && $class == 'location')) {?>
 	<script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=true"></script>
 	<?php } if(is_front_page()) {?>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/custom/custom_maps.js"></script>	
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/supersized.3.2.7.min.js"></script>
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/plugin/supersized.shutter.min.js"></script>
-	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/custom/custom.js"></script>
 	<?php } if(!is_front_page() && $class == 'location') {?>
 	<script type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/js/custom/custom_maps.js"></script>
 	<?php }?>
@@ -169,26 +170,7 @@ $class = $arrAttr[0];
 		//get_template_part( 'content', 'nav' );
 	//}?>
 	
-	<?php if(is_front_page()) {?>
-	<div id="slider" class="slider">		
-		<?php //begin.Thumbnail Navigation ?>
-		<div id="prevthumb"></div>
-		<div id="nextthumb"></div>
-	
-		<?php //begin.Time Bar ?>
-		<div id="progress-back" class="load-item">
-			<div id="progress-bar"></div>
-		</div>
-	
-		<?php //Control Bar ?>
-		<div id="controls-wrapper" class="load-item">
-			<div id="controls">	
-				<?php //Navigation ?>
-				<ul id="slide-list"></ul>
-			</div>
-		</div>
-	</div>
-	
+	<?php if(is_front_page()) {?>	
 	<div class="main home-preview-large">
 		<div class="container">
 			

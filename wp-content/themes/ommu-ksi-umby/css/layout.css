@@ -570,12 +570,17 @@ div.large-title .container h5 {
 
 
 div.main.home-preview-large {
-	background: #f8ad30;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	/*background: #f8ad30;*/
+	background: url('../images/bg.jpg') no-repeat center center;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
 }
 div.main.home-preview-large .container {
-	background: url('../images/resource/home_preview_large.png');	
-	background-position: 90% 100%; 
-	background-repeat: no-repeat;
 	padding: 80px 0 80px 0;	
 	min-height: 450px;
 }
@@ -767,6 +772,24 @@ div.body .content form#searchform input[type="submit"] {
 	font-size: 14px;
 	line-height: 20px;
 	font-weight: 300;	
+}
+
+#access-location .container h4 {
+	margin: 20px 0 10px 0;
+	font-weight: 600;
+	font-size: 17px;
+	line-height: 21px;
+	text-transform: uppercase;
+}
+#access-location .container ul li {
+	padding: 0 0 3px 0;
+}
+#access-location .container table td {
+	padding: 10px 0 10px 0;
+}
+#access-location .container table td:first-child {
+	border: 30px solid #fff;
+	display: none;
 }
 
 /* =Kesan
